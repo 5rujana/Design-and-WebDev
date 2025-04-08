@@ -89,20 +89,6 @@ Allows cross-origin requests to your API.
 npm install cors
 ```
 
-### **Running the Project**  
-
-To start the project in development mode with **nodemon**:  
-```sh
-npm run dev
-```
-
-To start the project normally:  
-```sh
-npm start
-```
-
-Let me know if you need any modifications.
-
 ### 3. Set up environment variables:
 
    - Create a `.env` file in the root directory.
@@ -116,11 +102,15 @@ Let me know if you need any modifications.
 
 ### 4. Run the server:
 
-   ```sh
-   npm start
-   ```
+  To start the project in development mode with **nodemon**:  
+```sh
+npm run dev
+```
 
-   The server will start on `http://localhost:5000` (default port).
+To start the project normally:  
+```sh
+npm start
+```
 
 ## Folder Structure
 
