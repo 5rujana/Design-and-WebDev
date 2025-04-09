@@ -85,7 +85,7 @@ Middleware for parsing cookies in requests.
 npm install cookie-parser
 ```
 
-#### **i. Install CORS**  
+#### **j. Install CORS**  
 Allows cross-origin requests to your API.  
 ```sh
 npm install cors
