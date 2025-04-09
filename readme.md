@@ -2,16 +2,18 @@
 
 ## Overview
 
-Welcome to the backend setup repository for the **CSI Design & Web Development Skill-Up Series 2025**. This repository serves as the foundation for backend development, covering essential features such as database integration, Cloudinary setup, asynchronous operations handling, API error management, and structured API responses. Additionally, it includes a user model, setting the stage for the next session on **User Authentication**.
+Welcome to the backend setup repository for the **CSI Design & Web Development Skill-Up Series 2025**. This repository serves as the foundation for backend development, covering essential features such as database integration, Cloudinary setup, asynchronous operations handling, API error management, and structured API responses.  It also includes a user model for implementing user authentication using JWT tokens, along with OAuth policies involving **access tokens and refresh tokens**. We also held a detailed discussion on **cookie-based authentication** mechanisms.
 
 ## Features
 
-- **Database Setup:** Preconfigured database connection for seamless integration.
-- **Cloudinary Integration:** Enables secure and efficient media uploads and storage.
-- **Asynchronous Operations Handling:** Proper use of async-await functions for smooth execution.
-- **API Error Management:** Centralized error handling for better debugging and stability.
-- **Structured API Responses:** Standardized response format for API consistency.
-- **User Model:** Base user schema to be expanded in the authentication session.
+- **Database Setup:** Includes a preconfigured MongoDB connection using Mongoose, ensuring a scalable and reliable data storage system with support for schema validation and query capabilities.
+- **Cloudinary Integration:** Seamless integration with Cloudinary for secure, scalable, and efficient image/media uploads and storage. Uploads are managed using `multer` and `cloudinary` SDK, with temporary file storage handled locally.
+- **Asynchronous Operations Handling:** All asynchronous logic is wrapped using custom async handlers to prevent repetitive try-catch blocks. This ensures smoother execution flow and easier debugging during development.
+- **API Error Management:** Centralized error handling using a custom `ApiError` class. Ensures consistent error response structure, simplifies debugging, and enhances stability across the codebase.
+- **Structured API Responses:** Responses are standardized using a utility formatter that ensures every success or failure response follows a consistent structure—improving clarity and client-side handling.
+
+- **User Model and Authentication:** A foundational user schema is included with fields ready for secure authentication. `JWT-based authentication` is implemented using access tokens and refresh tokens, with proper `OAuth` practices in place. Token management is enhanced with secure `HTTP-only cookies`, and sensitive data like passwords is hashed using industry best practices
+
 
 ## Prerequisites
 
@@ -88,6 +90,11 @@ Allows cross-origin requests to your API.
 ```sh
 npm install cors
 ```
+#### **i. Install JWT**  
+Used to securely transmit authentication tokens for user sessions.
+```sh
+npm install jwt
+```
 
 ### 3. Set up environment variables:
 
@@ -133,21 +140,18 @@ npm start
 └── 📄 .env  # Example environment variables
 ```
 
-## Next Session: User Authentication and Controller
+## Thank You
 
-In the upcoming session, we will implement **User Authentication**, covering:
+Thank you for being a part of the CSI Design & Web Development Skill-Up Series 2025. We hope this backend setup serves as a solid starting point for your learning journey. Stay curious, keep building, and don't hesitate to explore further.
 
-- User registration and login
-- JWT-based authentication
-- Secure password handling
+Happy coding!
 
-Additionally, we will cover Controller Implementation, including:
 
-- Structuring controllers for modularity
-- Handling API requests and responses efficiently
-- Implementing middleware for authentication
-- Error handling best practices
-Stay tuned!
+
+
+
+
+
 
 
 
