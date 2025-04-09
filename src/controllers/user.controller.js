@@ -126,7 +126,7 @@ const logoutUser = asyncHandler(async (req,res) =>{
     )
 })
 
-const refreshAccessToken = asyncHndler( async(req,res)=>{
+const refreshAccessToken = asyncHandler( async(req,res)=>{
     const incomingRefreshToken = req.cookies.refreshToken || req.body.refreshToken
     if(!incomingRefreshToken){
         throw new ApiError(401,"Uauthorized request")
@@ -175,6 +175,16 @@ const changeCurrentPassword = asyncHandler(async(req,res) =>{
     return res.status(200)
     .json(new ApiResponse(200,{},"Password is changed"))
 })
+
+/* 
+
+Assignment, Build the following controllers:
+-> updateAccountDetails
+-> getCurrentUser
+-> updateUserProfileImage
+->updateUserprofileImage
+
+ */
 
 export {
     registerUser,
